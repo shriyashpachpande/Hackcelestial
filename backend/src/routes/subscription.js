@@ -5,7 +5,7 @@
 // import UserSubscription from "../models/UserSubscription.js";  // MongoDB model
 // import { getCustomerIdForUser } from "../utils/db.js";         // Helper function to get customerId
 // import nodemailer from "nodemailer";
-
+import UserSubscription from "../models/UserSubscription.js";
 // dotenv.config();
 // const router = express.Router();
 // const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
