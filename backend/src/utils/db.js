@@ -1,4 +1,5 @@
-import UserSubscription from "../models/UserSubscription.js";
+import UserSubscription from "../models/userSubscription.js";
+
 import mongoose from "mongoose";
 export async function getCustomerIdForUser(userId) {
   const userSub = await UserSubscription.findOne({ userId });
