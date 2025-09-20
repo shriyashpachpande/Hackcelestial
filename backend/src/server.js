@@ -121,7 +121,7 @@ import multiReportRoutes from './routes/multi-report-route.js';
 import multiPolicyRoutes from './routes/multi-policy-route.js';
 import multiAnalyzeRoutes from './routes/multi-analyze-route.js';
 import medicalAnalysisRoutes from './routes/medicalAnalysisRoutes.js';
-import subscriptionRoutes from './routes/subscription.js';
+
 import { connectDB } from './utils/db.js';
 
 // NEW: Admin analytics
@@ -168,7 +168,7 @@ app.use('/api', uploadRoutes);
 app.use('/api', chatRoutes);
 
 // Clerk-protected
-app.use('/api/subscription', requireAuth(), subscriptionRoutes);
+
 
 // NEW: Admin-only analytics namespace (Basic Auth)
 app.use('/admin', adminAuth);
