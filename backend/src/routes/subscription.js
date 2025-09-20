@@ -390,7 +390,8 @@ import { requireAuth } from "@clerk/express";
 import dotenv from "dotenv";
 
 import nodemailer from "nodemailer";
-import UserSubscription from "../models/UserSubscription.js";
+import UserSubscription from "../models/userSubscription.js";
+
 dotenv.config();
 const router = express.Router();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
