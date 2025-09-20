@@ -1019,8 +1019,8 @@ const Analyzer = () => {
       toast.success("Covered under Government Scheme(s)");
       setAnalysis((prev) => ({ ...(prev || {}), govtSchemes: data.schemes }));
     } catch (e) {
-      toast.error("Error checking govt schemes");
-    }
+  console.log(e); // ya console.error(e)
+}
   };
 
   return (
