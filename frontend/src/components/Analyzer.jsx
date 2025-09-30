@@ -868,7 +868,7 @@ import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import gsap from "gsap";
-import demoVideo from "../assets/card4.mp4";
+import demoVideo from "../assets/analyzer-card.mp4";
 import adminVideo from "../assets/analyzer.mp4";
 import { toggleSpeak } from "../utils/speak";
 import { useTranslation } from "react-i18next";
