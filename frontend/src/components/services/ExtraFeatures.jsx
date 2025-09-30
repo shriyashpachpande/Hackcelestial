@@ -257,9 +257,6 @@
 
 
 
-
-
-
 import React, { useEffect, forwardRef, useRef, useImperativeHandle } from "react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
@@ -311,20 +308,20 @@ const ExtraFeatures = forwardRef((props, ref) => {
             </Link>
 
 
-            <Link to='/mediGuide' onClick={() => { scrollTo(0, 0); }}>
+            {/* <Link to='/mediGuide' onClick={() => { scrollTo(0, 0); }}> */}
                 <div className="feature-2 bg-white rounded-xl shadow-lg p-6 text-center"
                     style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
                     <h3 className="text-lg font-bold text-gray-900">{t('MediGuide')}</h3>
                     <p className="text-gray-600 mt-2">{t('Your trusted health assistant for accurate medical advice anytime.')}</p>
                 </div>
-            </Link>
-            <Link to='/diagnoScan' onClick={() => { scrollTo(0, 0); }}>
+            {/* </Link> */}
+            {/* <Link to='/diagnoScan' onClick={() => { scrollTo(0, 0); }}> */}
                 <div className="feature-3 bg-white rounded-xl shadow-lg p-6 text-center"
                     style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
                     <h3 className="text-lg font-bold text-gray-900">{t('DiagnoScan')}</h3>
                     <p className="text-gray-600 mt-2">{t('AI-powered scans to detect and explain health conditions quickly.')}</p>
                 </div>
-            </Link>
+            {/* </Link> */}
         </div>
     );
 });
