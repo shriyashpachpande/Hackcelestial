@@ -105,16 +105,18 @@ export default function SchemeForm() {
     // });
 
   }, []);
-
+const API_BASE = import.meta.env.VITE_API_BASE + "/api";
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/govt-schemes/add", {
-        schemeName: form.schemeName,
-        coveredDiseases: form.coveredDiseases.split(",").map((d) => d.trim()),
-        maxClaimLimit: form.maxClaimLimit,
-        description: form.description,
-      });
+      
+
+await axios.post(`${API_BASE}/govt-schemes/add`, {
+  schemeName: form.schemeName,
+  coveredDiseases: form.coveredDiseases.split(",").map((d) => d.trim()),
+  maxClaimLimit: form.maxClaimLimit,
+  description: form.description,
+});
 
       alert("✅ Scheme Added Successfully!");
       setForm({
