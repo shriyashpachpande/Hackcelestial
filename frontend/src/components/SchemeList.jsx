@@ -4,10 +4,13 @@ import axios from 'axios';
 export default function SchemeList() {
   const [schemes, setSchemes] = useState([]);
 
-  useEffect(() => {
-    axios.get('http://localhost:5000/api/govt-schemes/list')
-      .then(res => setSchemes(res.data.schemes));
-  }, []);
+  const API_BASE = import.meta.env.VITE_API_BASE + "/api";
+
+useEffect(() => {
+  axios.get(`${API_BASE}/govt-schemes/list`)
+    .then(res => setSchemes(res.data.schemes))
+    .catch(err => console.error(err));
+}, []);
 
   return (
     <div>
