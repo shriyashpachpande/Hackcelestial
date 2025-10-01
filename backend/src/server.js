@@ -137,7 +137,25 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Core middleware
-app.use(cors({ origin: 'http://localhost:5173', allowedHeaders: ['Content-Type','Authorization'] }));
+import cors from "cors";
+
+const allowedOrigins = [
+  "http://localhost:5173",              // Local dev
+  "https://sih-health.vercel.app"       // Deployed frontend
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
 app.use(express.json({ limit: '10mb' }));
 
 // Static uploads
