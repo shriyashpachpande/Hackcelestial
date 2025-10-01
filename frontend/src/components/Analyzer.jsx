@@ -874,7 +874,8 @@ import { toggleSpeak } from "../utils/speak";
 import { useTranslation } from "react-i18next";
 import Loading from "./Loading";
 
-const API = "http://localhost:5000/api";
+const API = import.meta.env.VITE_API_BASE + "/api";
+
 
 const Analyzer = () => {
   const [reportFile, setReportFile] = useState(null);
