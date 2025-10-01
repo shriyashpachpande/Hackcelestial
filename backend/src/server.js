@@ -136,8 +136,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// Core middleware
-import cors from "cors";
+
 
 const allowedOrigins = [
   "http://localhost:5173",              // Local dev
