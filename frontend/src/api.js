@@ -1,4 +1,5 @@
-const API_BASE = "http://localhost:5000/api"; // backend server
+const API_BASE = import.meta.env.VITE_API_BASE + "/api";
+
 
 export async function createCheckout(priceKey, token) {
   const res = await fetch(`${API_BASE}/subscription/create`, {
